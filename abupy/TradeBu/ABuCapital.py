@@ -41,7 +41,7 @@ class AbuCapital(PickleStateMixin):
         # 根据基准时间序列，制作相同的时序资金对象capital_pd(pd.DcataFrame对象)
         self.capital_pd = pd.DataFrame(
             {
-                'cash_blance': np.NAN * kl_pd.shape[0],
+                'cash_blance': np.full(kl_pd.shape[0], np.nan),
                 'stocks_blance': np.zeros(kl_pd.shape[0]),
                 'atr21': kl_pd['atr21'],
                 'date': kl_pd['date']
