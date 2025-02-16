@@ -45,7 +45,8 @@ def _benchmark(df, benchmark, symbol):
     :param symbol: Symbol对象
     :return: 使用基准的时间范围切割返回的金融时间序列
     """
-    if len(df.index & benchmark.kl_pd.index) <= 0:
+#    if len(df.index & benchmark.kl_pd.index) <= 0:
+    if len(df.index.intersection(benchmark.kl_pd.index)) <= 0:
         # 如果基准benchmark时间范围和输入的df没有交集，直接返回None
         return None
 
