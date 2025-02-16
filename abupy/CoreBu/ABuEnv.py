@@ -286,9 +286,9 @@ class EMarketSubType(Enum):
     """大连商品交易所DCE'"""
     DCE = 'DCE'
     """郑州商品交易所ZZCE'"""
-    ZZCE = 'ZCE'
+    ZZCE = 'ZZCE'
     """上海期货交易所SHFE'"""
-    SHFE = 'SHF'
+    SHFE = 'SHFE'
 
     """伦敦金属交易所"""
     LME = 'LME'
