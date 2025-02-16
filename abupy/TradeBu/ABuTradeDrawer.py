@@ -71,8 +71,8 @@ def plot_his_trade(orders, kl_pd):
                 # ipython环境绘制在多个子画布上
                 plt.subplot2grid(fig_dims, (index, 0))
             # 绘制价格曲线
-            plt.plot(all_pd.index, all_pd['close'], label='close')
-
+            #plt.plot(all_pd.index, all_pd['close'], label='close')
+            plt.plot(all_pd.index.to_numpy(), all_pd['close'].to_numpy(), label='close')
             try:
                 # 填充透明blue, 针对用户一些版本兼容问题进行处理
                 plt.fill_between(all_pd.index, 0, all_pd['close'], color='blue', alpha=.18)
