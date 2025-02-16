@@ -102,7 +102,7 @@ def code_to_symbol(code, rs=True):
         sub_market = EMarketSubType(AbuSymbolUS().query_symbol_sub_market(code))
         market = EMarketTargetType.E_MARKET_TARGET_US
         return Symbol(market, sub_market, stock_code)
-    elif (code[0].isalpha() and code[1:].isdigit()) or (code[:2].isalpha() and code[2:].isdigit()):
+    elif (code[0].isalpha() and code[1:].isdigit()) or (code[:2].isalpha() and code[2:].isdigit()) or code[:2].isalpha():
         # 匹配国内期货市场symbol
         futures_code = code.upper()
         q_df = AbuFuturesCn().query_symbol(futures_code)
