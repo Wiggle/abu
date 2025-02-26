@@ -290,6 +290,7 @@ class EMarketSubType(Enum):
     """上海期货交易所SHFE'"""
     SHFE = 'SHFE'
 
+
     """伦敦金属交易所"""
     LME = 'LME'
     """芝加哥商品交易所"""
